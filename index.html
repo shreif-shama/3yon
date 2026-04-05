@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سوق البيت الذكي | منصة الأدوات المنزلية والكهربائية</title>
+    <meta
+      name="description"
+      content="منصة عربية احترافية لسوق الأدوات المنزلية والأدوات الكهربائية مع خطط اشتراك للبائعين ولوحات تحكم متقدمة."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="brand">سوق البيت الذكي</div>
+      <nav>
+        <a href="#vendors">البائعون</a>
+        <a href="#plans">خطط الاشتراك</a>
+        <a href="#products">المنتجات</a>
+        <a href="#admin">لوحة المدير</a>
+      </nav>
+      <button class="btn btn-outline">تسجيل الدخول</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <span class="badge">منصة متكاملة 100% باللغة العربية</span>
+          <h1>سوق احترافي للأدوات المنزلية والكهربائية</h1>
+          <p>
+            أنشئ متجرك كبائع خلال دقائق، اختر خطة الاشتراك المناسبة، اعرض منتجاتك
+            بصور متعددة ومواصفات دقيقة، واستقبل الطلبات مع وسائل تواصل مباشرة
+            (اتصال + واتساب) ومدفوعات فيزا وفودافون كاش.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary">ابدأ كبائع الآن</button>
+            <button class="btn btn-outline">تصفح المتاجر</button>
+          </div>
+          <div class="stats">
+            <article>
+              <h3>+1200</h3>
+              <p>بائع نشط</p>
+            </article>
+            <article>
+              <h3>+28K</h3>
+              <p>منتج متاح</p>
+            </article>
+            <article>
+              <h3>99.9%</h3>
+              <p>استقرار المنصة</p>
+            </article>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>تسجيل بائع جديد</h2>
+          <form id="vendorSignupForm" class="grid-form">
+            <label>
+              اسم المتجر
+              <input type="text" name="store" placeholder="مثال: بيت الأجهزة" required />
+            </label>
+            <label>
+              رقم الجوال
+              <input type="tel" name="phone" placeholder="+201XXXXXXXXX" required />
+            </label>
+            <label>
+              اختر الخطة
+              <select name="plan" required>
+                <option value="">اختر من القائمة</option>
+                <option value="starter">المبتدئة</option>
+                <option value="pro">الاحترافية</option>
+                <option value="enterprise">الشركات</option>
+              </select>
+            </label>
+            <label>
+              كلمة المرور
+              <input type="password" name="password" required />
+            </label>
+            <button class="btn btn-primary" type="submit">إنشاء المتجر</button>
+          </form>
+          <p id="signupStatus" class="status"></p>
+        </div>
+      </section>
+
+      <section id="plans" class="section">
+        <div class="section-head">
+          <h2>خطط الاشتراك للبائعين</h2>
+          <p>كل بائع يختار الخطة المناسبة لحجم متجره وعدد المنتجات المطلوبة.</p>
+        </div>
+        <div class="cards three-col">
+          <article class="plan-card">
+            <h3>المبتدئة</h3>
+            <p class="price">199 جنيه / شهرياً</p>
+            <ul>
+              <li>حتى 50 منتج</li>
+              <li>صفحة متجر أساسية</li>
+              <li>دعم البريد الإلكتروني</li>
+            </ul>
+            <button class="btn btn-outline">اختيار الخطة</button>
+          </article>
+          <article class="plan-card featured">
+            <span class="tag">الأكثر طلباً</span>
+            <h3>الاحترافية</h3>
+            <p class="price">399 جنيه / شهرياً</p>
+            <ul>
+              <li>حتى 500 منتج</li>
+              <li>معرض صور غير محدود</li>
+              <li>تقارير مبيعات ذكية</li>
+            </ul>
+            <button class="btn btn-primary">اختيار الخطة</button>
+          </article>
+          <article class="plan-card">
+            <h3>الشركات</h3>
+            <p class="price">899 جنيه / شهرياً</p>
+            <ul>
+              <li>منتجات غير محدودة</li>
+              <li>إدارة فريق البائعين</li>
+              <li>مدير حساب مخصص</li>
+            </ul>
+            <button class="btn btn-outline">اختيار الخطة</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="products" class="section">
+        <div class="section-head">
+          <h2>واجهة المنتجات وسلة المشتريات</h2>
+          <p>كل منتج يتضمن صور متعددة، سعر، مواصفات، واتصال مباشر مع البائع.</p>
+        </div>
+        <div id="productGrid" class="cards three-col"></div>
+      </section>
+
+      <section id="vendors" class="section split">
+        <div class="panel">
+          <h2>لوحة تحكم البائع</h2>
+          <ul class="check-list">
+            <li>إدارة المنتجات (إضافة / تعديل / حذف)</li>
+            <li>معرض صور لكل منتج</li>
+            <li>تتبع الطلبات والمدفوعات</li>
+            <li>إظهار رقم الاتصال وزر واتساب تلقائياً</li>
+            <li>تقارير المبيعات ومعدلات التحويل</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h2>نموذج عربة شراء</h2>
+          <div class="cart-box">
+            <p>العناصر: <strong id="cartCount">0</strong></p>
+            <p>الإجمالي: <strong id="cartTotal">0</strong> جنيه</p>
+            <div class="pay-methods">
+              <button class="btn btn-outline">الدفع بفيزا</button>
+              <button class="btn btn-outline">الدفع بفودافون كاش</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="admin" class="section">
+        <div class="section-head">
+          <h2>لوحة المدير (Admin Dashboard)</h2>
+          <p>
+            تحكم كامل في الخطط، البائعين، المتاجر، الأعضاء، عمولات المنصة، والمحتوى.
+          </p>
+        </div>
+        <div class="cards four-col">
+          <article class="metric">
+            <h3>إجمالي البائعين</h3>
+            <p>1,208</p>
+          </article>
+          <article class="metric">
+            <h3>متاجر مفعلة</h3>
+            <p>978</p>
+          </article>
+          <article class="metric">
+            <h3>طلبات اليوم</h3>
+            <p>634</p>
+          </article>
+          <article class="metric">
+            <h3>إجمالي الإيراد</h3>
+            <p>1.9M جنيه</p>
+          </article>
+        </div>
+        <div class="admin-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>البائع</th>
+                <th>الخطة</th>
+                <th>الحالة</th>
+                <th>إجراءات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>شركة النخبة للأجهزة</td>
+                <td>الشركات</td>
+                <td><span class="dot active"></span>نشط</td>
+                <td><button class="btn btn-outline sm">إدارة</button></td>
+              </tr>
+              <tr>
+                <td>دار المنزل الذكي</td>
+                <td>الاحترافية</td>
+                <td><span class="dot active"></span>نشط</td>
+                <td><button class="btn btn-outline sm">إدارة</button></td>
+              </tr>
+              <tr>
+                <td>بيت الكفاءة</td>
+                <td>المبتدئة</td>
+                <td><span class="dot pending"></span>بانتظار التفعيل</td>
+                <td><button class="btn btn-outline sm">مراجعة</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 سوق البيت الذكي - تصميم احترافي عالي الدقة</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
